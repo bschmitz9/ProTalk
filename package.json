@@ -1,0 +1,27 @@
+{
+  "name": "protalk",
+  "version": "0.0.1",
+  "description": "App that allows fans of all sports to chat, discuss, and brag about his or her favorite teams.",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "keywords": [
+    "Pro",
+    "Chat",
+    "Teams",
+    "Fans"
+  ],
+  "author": "Brian Schmitz",
+  "license": "ISC",
+  "dependencies": {
+    "connect-mongo": "^0.8.2",
+    "cookie-parser": "^1.3.5",
+    "express": "^4.13.2",
+    "express-session": "^1.11.3",
+    "hogan-express": "^0.5.2",
+    "mongoose": "^4.1.0",
+    "passport": "^0.2.2",
+    "passport-facebook": "^2.0.0",
+    "socket.io": "^0.9.17"
+  }
+}

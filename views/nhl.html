@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{title}}</title>
+    <meta charset="utf-8">
+    <meta name="description" content="This is a forum for sports fans to chat, discuss, and maybe even brag alittle but about his or her favorite teams.">
+    <meta name="keywords" content="sports, news, updates, chat, fans, teams">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet/less" type="text/css" href="../css/sports.less" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/0.9.17/socket.io.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/2.5.1/less.min.js"></script>
+    <script>
+        var config = '{{config.host}}';
+    </script>
+    <script src="../js/sports.js"></script>
+    <script src="../js/nhlsocket.js"></script>
+</head>
+<body>
+    <div class="container">
+         <div class="row">
+            <div class="col-sm-6">
+            <!-- header and user FB information - pic and name-->
+                <h2 class="pageheader"><i class="fa fa-comment"></i> Pro Talk <span class="topicLabelnhl">NHL</span><small id="sportsFans"><img class="hockey pull-right" src="../images/puck.jpeg"/> <br> Real Time Chat For All NHL Fans</small></h2>   
+            </div>
+            <div class="col-sm-6">
+                <small class="pageheader pull-right"><img src="{{user.profilePic}}" class="userPic"> Hi, {{user.fullName}} | <a href="/logout">Log Out</a></small>
+            </div>
+        </div>
+          <div class="row">
+            <div class="col-sm-6 addTopic">
+            <!--user joins an existing chat or creates a new chat-->
+                  <label class="control-label topicLabelnhl" for="newTopic">Join an existing chat, or start a new discussion below.</label>
+                   <div class="input-group">
+                       <input type="text" class="form-control newnhlRoom">
+                       <span class="input-group-btn">
+                            <button class="btn btncolornhl" type="button" id="createnhlTopic">Add Topic</button>
+                       </span>
+                   </div>
+                <div class="nhlroomList">
+                    <!--data dynamically added here when the user creates a new topic via the jQuery code-->
+                </div>
+            </div>
+        </div>
+        <div>
+        <!-- link options for the user to view other leagues-->
+            <p class="otherLeagues"><u>Check out what's happening in other leagues:</u></p> 
+            <a class="mlbLink" href="/mlb">MLB Discussions</a><br>
+            <a class="nbaLink" href="/nba">NBA Discussions</a><br>
+            <a class="nflLink" href="/nfl">NFL Discussions</a>
+        </div>
+    </div>
+</body>
+</html>

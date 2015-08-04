@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{title}}</title>
+    <meta charset="utf-8">
+    <meta name="description" content="This is a forum for sports fans to chat, discuss, and maybe even brag alittle but about his or her favorite teams.">
+    <meta name="keywords" content="sports, news, updates, chat, fans, teams">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet/less" type="text/css" href="../css/sportschat.less" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/0.9.17/socket.io.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/2.5.1/less.min.js"></script>
+    <script>
+        var config = '{{config.host}}';
+        var roomNumber = {{room_number}};
+        var roomUserName = '{{user.fullName}}';
+        var roomUserPic = '{{user.profilePic}}';
+    </script>
+    <script src="../js/nbachatsocket.js"></script>
+</head>
+<body>
+     <div class="container">
+        <div class="row">
+            <div class="col-sm-6">
+                <!-- header and user FB information - pic and name-->
+                <h2 class="pageheader"><i class="fa fa-comment"></i> Pro Talk <span class="topicLabelnba">NBA</span><small id="sportsFans"> Real Time Chat For All NBA Fans</small></h2>   
+            </div>
+            <div class="col-sm-6">
+                <small class="pageheader pull-right"><img src="{{user.profilePic}}" class="userPic"> Hi, {{user.fullName}} | <a href="/logout">Log Out</a></small>
+            </div>
+        </div> 
+        <a href="/nba" class="goBackNBA pull-right">Return to NBA Topics</a> 
+        <div class="row">
+            <!-- this is where the chat takes place once a user has chosen a discussion room to join-->
+             <div class="chatArea">
+                 <h3 class="text-center chosenTopic"><img class="baseball" src="../images/basketball2.png"/><span class="topicLabelnba"> Topic:</span> {{room_name}}</h3>
+                 <div class="roomMessages">
+                     <ul class="messages">
+                <!-- information is added dynamically by the user with profilePic and user message-->
+                    </ul>
+                </div>
+                <!-- show all users currently in the chat-->
+                <div class="usersInRoom">
+                    <ul class="users">
+                    <!-- this information is added dynamically via the updateNBAUsersList event-->  
+                    </ul>
+                </div>
+                <!-- user can add a message to the discussion here -->
+                <div class="newMessage">
+                   <textarea class="form-control addMessage" rows="3" placeholder="Add a message here. Press enter or click 'Add Message' to add your message to the discussion."></textarea>
+                   <button type="button" class="btn btncolornba pull-right submitMessage">Add Message</button>
+                </div>
+             </div>
+        </div>
+    </div>
+</body>
+</html>

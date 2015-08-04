@@ -1,0 +1,231 @@
+@white: white;
+@red: #ff1919;
+@orange: #ffa500;
+@green: #009900;
+@brown: #926239;
+
+//style for the user pic received from Facebook
+.userPic{
+        border-radius: 100%;
+        margin-top:5px;
+    }
+
+/*sets the color in the header of the page for each individual league*/
+.topicLabelnba{
+        color:@orange;
+    }
+
+
+.topicLabelmlb{
+        color: @red;
+    }
+
+
+.topicLabelnhl{
+       color: @green;
+    }
+
+.topicLabelnfl{
+        color: @brown;
+    }
+
+/*this gives each league a margin so there is space between the intro header and the directions for a
+a user to join a chatroom  or add a new discussion*/
+.addTopic{
+    //set the header and button color for each league page
+    .topicLabelnba{
+        margin-top: 30px;
+    }
+
+    .btncolornba{
+        background-color:@orange;
+        color:@white;
+    }
+
+     .topicLabelmlb{
+        margin-top: 30px;
+    }
+
+    .btncolormlb{
+         background-color: @red;
+         color:@white;
+    }
+
+     .topicLabelnhl{
+        margin-top: 30px;
+    }
+
+    .btncolornhl{
+        background-color: @green;
+        color:@white;
+    }
+
+     .topicLabelnfl{
+        margin-top: 30px;
+    }
+
+    .btncolornfl{
+        background-color: @brown;
+        color:@white;
+    }
+
+    .roomList{
+        height:400px;
+        border:1px solid black;
+        overflow-y: auto;
+    }
+}
+
+
+//logo sizing for each individual chat page
+.football {
+    height: 50px;
+    width: 100px;
+}
+
+.baseball,
+.hockey,
+.basketball {
+    height: 50px;
+    width: 50px;
+}
+
+
+//color links at the bottom of the each league page
+.mlbLink{
+    color: @red;
+}
+
+.nbaLink{
+    color: @orange;
+}
+
+.nflLink{
+     color: @brown;
+}
+
+.nhlLink{
+    color: @green;
+}
+
+
+//this sets the colors to stay the same even when the user hovers over each one
+a.mlbLink:hover{
+    color: @red;
+}
+
+a.nbaLink:hover{
+    color: @orange;
+}
+
+a.nflLink:hover{
+    color: @brown;
+}
+
+a.nhlLink:hover{
+    color: @green;
+}
+
+//sets the decoration for the topic list the mlb page
+.mlbroomList {
+    border:1px solid;
+    height:500px;
+    overflow-x:hidden;
+    overflow-y:auto;
+    background: rgb(237, 237, 237);
+
+    a li {
+        color:#000;
+        text-decoration:none;
+        list-style: none;
+        font-weight: bold;
+        margin: 20px;
+        border-bottom: 1px solid @red;
+        display: block;
+    }
+
+    a:link{
+        text-decoration: none;
+    }
+}
+
+
+//this sets the chat room list for the nba room
+.nbaroomList {
+    border:1px solid;
+    height:500px;
+    overflow-x:hidden;
+    overflow-y:auto;
+    background: rgb(237, 237, 237);
+
+     a li {
+        color:#000;
+        text-decoration:none;
+        list-style: none;
+        font-weight: bold;
+        margin: 20px;
+        border-bottom: 1px solid @orange;
+        display: block;
+    }
+
+    a:link{
+        text-decoration: none;
+    }
+
+}
+
+//this sets the chat room list for the nfl room
+.nflroomList {
+    border:1px solid;
+    height:500px;
+    overflow-x:hidden;
+    overflow-y:auto;
+    background: rgb(237, 237, 237);
+
+         a li {
+            color:#000;
+            text-decoration:none;
+            list-style: none;
+            font-weight: bold;
+            margin: 20px;
+            border-bottom: 1px solid @brown;
+            display: block;
+        }
+
+        a:link{
+            text-decoration: none;
+        }
+
+}
+
+
+//this sets the chat room list for the nhl room
+.nhlroomList {
+    border:1px solid;
+    height:500px;
+    overflow-x:hidden;
+    overflow-y:auto;
+    background: rgb(237, 237, 237);
+
+        a li {
+            color:#000;
+         text-decoration:none;
+         list-style: none;
+         font-weight: bold;
+         margin: 20px;
+         border-bottom: 1px solid @green;
+         display: block;
+        }
+
+        a:link{
+            text-decoration: none;
+        }
+
+}
+
+
+//links at the bottom of each league's page giving the user the option to check a different league's chat room
+.otherLeagues{
+    font-weight: bold;
+    margin-top: 15px;
+}

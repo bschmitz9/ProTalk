@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{title}}</title>
+    <meta charset="utf-8">
+    <meta name="description" content="This is a forum for sports fans to chat, discuss, and maybe even brag alittle but about his or her favorite teams.">
+    <meta name="keywords" content="sports, news, updates, chat, fans, teams">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet/less" type="text/css" href="../css/selectLeague.less" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/2.5.1/less.min.js"></script>
+    <script src="../js/selectLeague.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <!-- header and user FB information - pic and name-->
+            <div class="col-sm-6">
+                <h2 class="pageheader"><i class="fa fa-comment"></i> Pro Talk <small id="sportsFans"> Real Time Chat For All Sports Fans</small></h2>   
+            </div>
+            <div class="col-sm-6">
+                <small class="pageheader pull-right"><img src="{{user.profilePic}}" class="userPic"/> Hi, {{user.fullName}} | <a href="/logout"> Log Out</a></small>
+            </div>
+        </div>
+
+        <div class="row userGreet">
+            <!--shows each league option once the page loads, user can click on logo to go to that chat area-->
+            <div id="directions">
+                <p class="text-center">Welcome to Pro Talk, {{user.fullName}}. Please click on the league you would like to discuss today:<p>
+            </div>
+
+                <div class="leaguePic mlbDiv col-sm-3">
+                    <a href="/mlb"><img src="../images/mlb.jpeg"></a>
+                </div>
+                <div class="leaguePic nhlDiv col-sm-3">
+                    <a href="/nhl"><img src="../images/nhl.jpeg"></a>
+                </div>
+                <div class="leaguePic nbaDiv col-sm-3">
+                    <a href="/nba"><img class="nbaPic" src="../images/nba.png"></a>
+                </div>
+                <div class="leaguePic nflDiv col-sm-3">
+                    <a href="/nfl"><img src="../images/nfl.jpeg"></a>
+                </div>
+        </div>
+    </div>
+</body>
+
+

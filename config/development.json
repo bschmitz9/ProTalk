@@ -1,0 +1,10 @@
+{
+    "dbURL": "mongodb://protalkuser:talk@ds041851.mongolab.com:41851/protalk",
+    "sessionSecret":"LDKJFBDIDIEND334355667",
+    "fb":{
+        "appID":"1664944233729096",
+        "appSecret": "0b04325f3370ada6cd410316cb2ffe62",
+        "callbackURL" : "http://localhost:8000/auth/facebook/callback" 
+    },
+    "host": "http://localhost:8000"
+}
